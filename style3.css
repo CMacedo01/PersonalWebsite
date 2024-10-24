@@ -1,0 +1,243 @@
+/* General Styles */
+html {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+}
+
+body {
+    background-color: #212531;
+    color: #c5c3c4;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+}
+
+/* Sidebar */
+.sidebar {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    display: flex;
+    gap: 20px;
+}
+
+.sidebar a {
+    position: relative;
+    padding: 10px 20px;
+    color: #a4a3c1;
+    text-decoration: none;
+    background: rgba(33, 37, 49, 0.7); /* Semi-transparent background */
+    border-radius: 25px;
+    display: inline-block;
+    font-size: 1.2em;
+    transition: background 0.3s, color 0.3s;
+}
+
+.sidebar a.active {
+    background: rgba(48, 55, 93, 0.8); /* Slightly less transparent for active link */
+    color: #fff;
+}
+
+.sidebar a:hover {
+    background: rgba(255, 255, 255, 0.8);
+    color: #212531;
+}
+
+/* Content Area */
+.content {
+    margin-left: 270px;
+    padding: 20px;
+}
+
+.section {
+    background-color: #322f42;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px 0;
+    color: #e0e0e0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+.section h2 {
+    font-size: 2em;
+    color: #e8eaf6;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.section-divider {
+    width: 50px;
+    height: 4px;
+    background-color: #e8eaf6;
+    margin: 10px 0;
+    border-radius: 2px;
+}
+
+/* Columns */
+.columns {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.column {
+    background-color: #3a3347;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: #e0e0e0;
+}
+
+.column-60 {
+    flex: 0 0 60%;
+}
+
+.column-40 {
+    flex: 0 0 40%;
+}
+
+.column-50 {
+    flex: 0 0 50%;
+}
+.column a{
+    color: #c5c3c4;
+}
+
+/* Art Section */
+.art-section img {
+    width: 100%;
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Solar System Animation */
+.solar-system {
+    position: relative;
+    width: 100%;
+    height: 400px; /* Increased height for better visibility */
+    background-color: #000;
+    border-radius: 15px;
+    margin: 20px 0;
+    overflow: hidden; /* Ensures no overflow from animation */
+}
+
+.sun {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60px;
+    height: 60px;
+    background-color: #ffeb3b;
+    border-radius: 50%;
+    z-index: 1;
+}
+/* Textbox Section */
+.textbox-section {
+    background-color: #322f42;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px 0;
+    color: #e0e0e0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.textbox-section h2 {
+    font-size: 2em;
+    color: #e8eaf6;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.textbox {
+    width: 100%;
+    height: 200px;
+    background-color: #3a3347;
+    color: #e0e0e0;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 1em;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    resize: none;
+}
+
+
+.planet {
+    position: absolute;
+    border-radius: 50%;
+}
+
+.planet-1 { width: 20px; height: 20px; background-color: #ff5722; animation: orbit-1 10s linear infinite; }
+.planet-2 { width: 25px; height: 25px; background-color: #3f51b5; animation: orbit-2 15s linear infinite; }
+.planet-3 { width: 30px; height: 30px; background-color: #4caf50; animation: orbit-3 20s linear infinite; }
+.planet-4 { width: 15px; height: 15px; background-color: #ff9800; animation: orbit-4 12s linear infinite; }
+.planet-5 { width: 18px; height: 18px; background-color: #9c27b0; animation: orbit-5 18s linear infinite; }
+.planet-6 { width: 22px; height: 22px; background-color: #03a9f4; animation: orbit-6 22s linear infinite; }
+.planet-7 { width: 27px; height: 27px; background-color: #ffeb3b; animation: orbit-7 25s linear infinite; }
+.planet-8 { width: 33px; height: 33px; background-color: #8bc34a; animation: orbit-8 30s linear infinite; }
+
+@keyframes orbit-1 {
+    0% { transform: rotate(0deg) translateX(80px) rotate(0deg); }
+    100% { transform: rotate(360deg) translateX(80px) rotate(-360deg); }
+}
+
+@keyframes orbit-2 {
+    0% { transform: rotate(0deg) translateX(120px) rotate(0deg); }
+    100% { transform: rotate(360deg) translateX(120px) rotate(-360deg); }
+}
+
+@keyframes orbit-3 {
+    0% { transform: rotate(0deg) translateX(160px) rotate(0deg); }
+    100% { transform: rotate(360deg) translateX(160px) rotate(-360deg); }
+}
+
+@keyframes orbit-4 {
+    0% { transform: rotate(0deg) translateX(200px) rotate(0deg); }
+    100% { transform: rotate(360deg) translateX(200px) rotate(-360deg); }
+}
+
+@keyframes orbit-5 {
+    0% { transform: rotate(0deg) translateX(240px) rotate(0deg); }
+    100% { transform: rotate(360deg) translateX(240px) rotate(-360deg); }
+}
+
+@keyframes orbit-6 {
+    0% { transform: rotate(0deg) translateX(280px) rotate(0deg); }
+    100% { transform: rotate(360deg) translateX(280px) rotate(-360deg); }
+}
+
+@keyframes orbit-7 {
+    0% { transform: rotate(0deg) translateX(320px) rotate(0deg); }
+    100% { transform: rotate(360deg) translateX(320px) rotate(-360deg); }
+}
+
+@keyframes orbit-8 {
+    0% { transform: rotate(0deg) translateX(360px) rotate(0deg); }
+    100% { transform: rotate(360deg) translateX(360px) rotate(-360deg); }
+}
+
+/* Asteroids */
+.asteroid {
+    position: absolute;
+    border-radius: 50%;
+    background-color: #7e8c8d;
+}
+
+.asteroid-1 { width: 10px; height: 10px; animation: asteroid-1 30s linear infinite; }
+.asteroid-2 { width: 12px; height: 12px; animation: asteroid-2 40s linear infinite; }
+
+@keyframes asteroid-1 {
+    0% { transform: rotate(0deg) translateX(150px) rotate(0deg); }
+    100% { transform: rotate(360deg) translateX(150px) rotate(-360deg); }
+}
+
+@keyframes asteroid-2 {
+    0% { transform: rotate(0deg) translateX(200px) rotate(0deg); }
+    100% { transform: rotate(360deg) translateX(200px) rotate(-360deg); }
+}
